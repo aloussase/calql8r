@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calculator App</string>
+    <string name="digitSeven">7</string>
+    <string name="digitEight">8</string>
+    <string name="digitNine">9</string>
+    <string name="opDivide">/</string>
+    <string name="digitFour">4</string>
+    <string name="digitFive">5</string>
+    <string name="digitSix">6</string>
+    <string name="opMultiply">x</string>
+    <string name="digitOne">1</string>
+    <string name="digitTwo">2</string>
+    <string name="digitThree">3</string>
+    <string name="opMinus">-</string>
+    <string name="digitZero">0</string>
+    <string name="dot">.</string>
+    <string name="clear">CLR</string>
+    <string name="opEq">=</string>
+    <string name="inputTxt">0</string>
+</resources>
