@@ -1,5 +1,7 @@
 package io.github.aloussse.calculator
 
+import android.util.Log
+
 class NormalCalculatorState(private val stateMachine: StateMachine<CalculatorState>) :
     CalculatorState {
     override fun onDigit(currentInput: String, digit: String): String {
@@ -18,5 +20,13 @@ class NormalCalculatorState(private val stateMachine: StateMachine<CalculatorSta
 
     override fun onClear(currentInput: String): String {
         return ""
+    }
+
+    override fun onEqual(currentInput: String): String {
+        val result = Evaluator(currentInput).eval()
+        if (result != null) {
+            return result.toString()
+        }
+        return currentInput
     }
 }

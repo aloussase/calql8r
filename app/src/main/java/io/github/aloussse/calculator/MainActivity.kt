@@ -48,9 +48,13 @@ class MainActivity : AppCompatActivity(), StateMachine<CalculatorState> {
         )
 
         digitButtons.forEach { it.setOnClickListener(this::onDigitClicked) }
+
         opButtons.forEach { it.setOnClickListener(this::onOpClicked) }
+
         findViewById<Button>(R.id.btnClear).setOnClickListener(this::onClearClicked)
         findViewById<Button>(R.id.btnDot).setOnClickListener(this::onDotClicked)
+
+        findViewById<Button>(R.id.opEq).setOnClickListener(this::onEqualClicked)
     }
 
     private fun onOpClicked(view: View) {
@@ -69,5 +73,9 @@ class MainActivity : AppCompatActivity(), StateMachine<CalculatorState> {
 
     private fun onDotClicked(view: View) {
         currentInput = state.onDot(currentInput)
+    }
+
+    private fun onEqualClicked(view: View) {
+        currentInput = state.onEqual(currentInput)
     }
 }

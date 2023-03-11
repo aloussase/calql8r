@@ -20,4 +20,16 @@ class DotCalculatorState(private val stateMachine: StateMachine<CalculatorState>
         stateMachine.changeState(NormalCalculatorState(stateMachine))
         return ""
     }
+
+    override fun onEqual(currentInput: String): String {
+        stateMachine.changeState(NormalCalculatorState(stateMachine))
+
+        val result = Evaluator(currentInput).eval()
+
+        if (result != null) {
+            return result.toString()
+        }
+
+        return currentInput
+    }
 }

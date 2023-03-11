@@ -8,4 +8,6 @@ interface CalculatorState {
     fun onDot(currentInput: String): String
 
     fun onClear(currentInput: String): String
+
+    fun onEqual(currentInput: String): String
 }

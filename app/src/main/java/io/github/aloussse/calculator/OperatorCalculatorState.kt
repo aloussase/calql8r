@@ -19,4 +19,8 @@ class OperatorCalculatorState(private val stateMachine: StateMachine<CalculatorS
         stateMachine.changeState(NormalCalculatorState(stateMachine))
         return ""
     }
+
+    override fun onEqual(currentInput: String): String {
+        return currentInput
+    }
 }
